@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Color converter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h2>RGB<-->HSL<-->LAB color converter</h2>
+
+<div class="row">
+    <div class="column" style="background-color:#aaa;">
+        <div class = "content">
+            <h2>RGB</h2>
+            <label for="R">R:</label>
+            <input type="number" id="R" name="R" oninput="rgbChange()"><br><br>
+            <div class="slidercontainer">
+                <input type="range" min="0" max="255" value="50" class="slider" id="rRGBslider" oninput="rRGBsliderChange()">
+            </div>
+            <label for="G">G:</label>
+            <input type="number" id="G" name="G" oninput="rgbChange()"><br><br>
+            <div class="slidercontainer">
+                <input type="range" min="0" max="255" value="50" class="slider" id="gRGBslider" oninput="gRGBsliderChange()">
+            </div>
+            <label for="Brgb">B:</label>
+            <input type="number" id="Brgb" name="Brgb" oninput="rgbChange()"><br><br>
+            <div class="slidercontainer">
+                <input type="range" min="0" max="255" value="50" class="slider" id="bRGBslider" onchange="bRGBsliderChange()">
+            </div>
+        </div>
+    </div>
+    <div class="column" style="background-color:#bbb;">
+        <div class = "content">
+            <h2>HSL</h2>
+            <label for="H">H:</label>
+            <input type="number" id="H" name="H" oninput="hlsChange()"><br><br>
+            <div class="slidercontainer">
+                <input type="range" min="0" max="360" value="50" class="slider" id="hHSLslider" oninput="hHSLsliderChange()">
+            </div>
+            <label for="S">S:</label>
+            <input type="number" id="S" name="S" oninput="hlsChange()"><br><br>
+            <div class="slidercontainer">
+                <input type="range" min="0" max="100" value="50" class="slider" id="sHSLslider" oninput="sHSLsliderChange()">
+            </div>
+            <label for="Lhls">L:</label>
+            <input type="number" id="Lhls" name="Lhls" oninput="hlsChange()"><br><br>
+            <div class="slidercontainer">
+                <input type="range" min="0" max="100" value="50" class="slider" id="lHSLslider" oninput="lHSLsliderChange()">
+            </div>
+        </div>
+    </div>
+    <div class="column" style="background-color:#ccc;">
+        <div class = "content">
+            <h2>LAB</h2>
+            <label for="Llab">L:</label>
+            <input type="number" id="Llab" name="Llab" oninput="labChange()"><br><br>
+            <div class="slidercontainer">
+                <input type="range" min="0" max="100" value="50" class="slider" id="lLABslider" oninput="lLABsliderChange()">
+            </div>
+            <label for="A">A:</label>
+            <input type="number" id="A" name="A"  oninput="labChange()"><br><br>
+            <div class="slidercontainer">
+                <input type="range" min="-120" max="120" value="50" class="slider" id="aLABslider" oninput="aLABsliderChange()">
+            </div>
+            <label for="Blab">B:</label>
+            <input type="number" id="Blab" name="Blab"  oninput="labChange()"><br><br>
+            <div class="slidercontainer">
+                <input type="range" min="-120" max="120" value="50" class="slider" id="bLABslider" oninput="bLABsliderChange()">
+            </div>
+        </div>
+    </div>
+    <div class = "picker">
+        <input type="color" id="picker" name="picker"
+               value="#e66465">
+        <label for="picker">Pick color</label>
+    </div>
+
+</div>
+<script src="controller.js"></script>
+</body>
+</html>
